@@ -1,0 +1,62 @@
+<div class="item">
+        <div>Avatar URL</div>
+        <input type="url" name="url" placeholder="https://" value="{{teacher.url}}">
+      </div>
+
+      <div class="item">
+        <div>Nome</div>
+        <input type="text" name="name" placeholder="Nome do Professor" value="{{teacher.name}}">
+      </div>
+
+      <div class="item">
+        <div>Data de nascimento</div>
+        <input type="date" name="birth" value="{{teacher.birth}}">
+      </div>
+      <div class="item">
+        <div>Grau de escolaridade</div>
+        <select name="schooling">
+          <option value="Ensino medio"
+          {% if teacher.schooling == "Ensino medio" %}
+            selected
+          {% endif %} >Ensino Médio Completo</option>
+          <option value="ensino superior"
+          {% if teacher.schooling == "ensino superior" %}
+            selected
+          {% endif %}>Ensino Superior Completo</option>
+          <option value="mestrado" 
+          {% if teacher.schooling == "mestrado" %}
+            selected
+          {% endif %} >Mestrado</option>
+          <option value="doutorado"
+          {% if teacher.schooling == "doutorado" %}
+            selected
+          {% endif %} >Doutorado</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <div>Tipo de aula</div>
+        <div class="check">
+          <input id="Presencial"type="radio" name="type_of_class" value="Presencial" 
+          {% if teacher.type_of_class == "Presencial" %}
+            checked
+          {% endif %} >
+          <label for="Presencial">Presencial</label>
+          <input id="EAD" type="radio" name="type_of_class" value="EAD"
+          {% if teacher.type_of_class == "EAD" %}
+            checked
+          {% endif %} >
+          <label class="label_position" for="EAD">À distância</label>
+
+        </div>
+      </div>
+      <div class="item">
+        <div>Area de atuação</div>
+        <input 
+        type="text" 
+        name="area"
+        placeholder="Separe a area de atuação por virgula"
+        value="{{teacher.area}}"
+        >
+      </div>
+    <button type="submit">Salvar</button>

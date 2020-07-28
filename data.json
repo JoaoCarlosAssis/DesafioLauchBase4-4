@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Juscelia Mesquita",
+      "url": "https://veja.abril.com.br/wp-content/uploads/2018/05/modelo-branca-oculos-20170723-001.jpg",
+      "created_at": 1595965672092,
+      "birth": 641520000000,
+      "schooling": "doutorado",
+      "type_of_class": "Presencial",
+      "area": "Matematica, Logica de Programação"
+    }
+  ]
+}
